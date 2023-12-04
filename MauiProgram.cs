@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MovieRating.Pages;
 
 namespace MovieRating
 {
@@ -15,9 +16,22 @@ namespace MovieRating
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<MoviesViewModel>();
+
+            builder.Services.AddSingleton<MainPage>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+//            //TODO:
+//            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) =>
+//            {
+//#if ANDROID
+//#elif IOS || MACCATALYST
+//#elif WINDOWS
+//#endif
+//            });
 
             return builder.Build();
         }

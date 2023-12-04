@@ -1,0 +1,11 @@
+﻿global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using MovieRating.Models;
+global using MovieRating.ViewModels;
+global using MovieRating.Controls;
+global using MovieRating.Drawables;
+global using System.Collections.ObjectModel;
+global using System.ComponentModel;
+global using System.Diagnostics;
+global using System.Runtime.CompilerServices;
+global using System.Text.Json;
